@@ -31,6 +31,11 @@ protocol Address {
     var zipCode: String { get }
 }
 
+//Only add this to entrants who need to provide a social security number
+protocol SocialSecurityNumber {
+    var socialSecurityNumer: Int { get }
+}
+
 //Only add this to entrants who need to provide a date of birth
 protocol DateOfBirth {
     var dateOfBirth: Date? { get }

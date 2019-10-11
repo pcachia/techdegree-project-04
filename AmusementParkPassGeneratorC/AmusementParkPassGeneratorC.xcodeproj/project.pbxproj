@@ -19,6 +19,7 @@
 		DA0D585C23468BA200279AE0 /* ParkAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0D585B23468BA200279AE0 /* ParkAccess.swift */; };
 		DA0D585E23468BC700279AE0 /* Guest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0D585D23468BC700279AE0 /* Guest.swift */; };
 		DA0D586023468C2500279AE0 /* EntrantTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0D585F23468C2500279AE0 /* EntrantTypes.swift */; };
+		DAF7A9FC23505ED100FCF7B7 /* Dates.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF7A9FB23505ED100FCF7B7 /* Dates.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		DA0D585B23468BA200279AE0 /* ParkAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkAccess.swift; sourceTree = "<group>"; };
 		DA0D585D23468BC700279AE0 /* Guest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guest.swift; sourceTree = "<group>"; };
 		DA0D585F23468C2500279AE0 /* EntrantTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntrantTypes.swift; sourceTree = "<group>"; };
+		DAF7A9FB23505ED100FCF7B7 /* Dates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dates.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				DA0D585B23468BA200279AE0 /* ParkAccess.swift */,
 				DA0D585D23468BC700279AE0 /* Guest.swift */,
 				DA0D585F23468C2500279AE0 /* EntrantTypes.swift */,
+				DAF7A9FB23505ED100FCF7B7 /* Dates.swift */,
 				DA0D584723468AC100279AE0 /* Main.storyboard */,
 				DA0D584A23468AC400279AE0 /* Assets.xcassets */,
 				DA0D584C23468AC400279AE0 /* LaunchScreen.storyboard */,
@@ -157,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA0D585623468AFB00279AE0 /* Entrant.swift in Sources */,
+				DAF7A9FC23505ED100FCF7B7 /* Dates.swift in Sources */,
 				DA0D584623468AC100279AE0 /* ViewController.swift in Sources */,
 				DA0D585C23468BA200279AE0 /* ParkAccess.swift in Sources */,
 				DA0D584223468AC100279AE0 /* AppDelegate.swift in Sources */,

@@ -24,7 +24,9 @@ enum EmployeeType {
 }
 
 enum ManagerType {
-    case manager
+    case shiftManager
+    case generalManager
+    case seniorManager
 }
 
 //enum VendorType {

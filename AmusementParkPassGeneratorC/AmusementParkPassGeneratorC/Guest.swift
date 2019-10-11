@@ -36,13 +36,15 @@ struct Guest: Entrant, DateOfBirth {
     }
 }
 
-struct Employee: Entrant, Nameable, Address {
+struct Employee: Entrant, Nameable, Address, SocialSecurityNumber, DateOfBirth {
     var firstName: String
     var lastName: String
     var streetAddress: String
     var city: String
     var state: String
     var zipCode: String
+    var socialSecurityNumer: Int
+    var dateOfBirth: Date?
     var type: EmployeeType
     var pass: Swipeable?
     
@@ -68,16 +70,18 @@ struct Employee: Entrant, Nameable, Address {
     }
 }
 
-struct Manager: Entrant, Nameable, Address {
+struct Manager: Entrant, Nameable, Address, SocialSecurityNumber, DateOfBirth {
     var firstName: String
     var lastName: String
     var streetAddress: String
     var city: String
     var state: String
     var zipCode: String
+    var socialSecurityNumer: Int
+    var dateOfBirth: Date?
     var type: ManagerType
     var pass: Swipeable?
-        
+
     func swipe(for area: AreaAccess) -> Bool {
         guard let pass = pass else { return false }
         
@@ -97,6 +101,26 @@ struct Manager: Entrant, Nameable, Address {
         
         let kiosk = Kiosk()
         return kiosk.checkRideAccess(for: pass, and: ride)
+    }
+    
+    func checkBirthday(for entrant: Date?) -> Bool {
+        guard let hasBirthday = dateOfBirth else { return false }
+        
+        // getting today's date
+        let now = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd"
+        let todayNumberOfDay = Int(dateFormatter.string(from: now))
+        dateFormatter.dateFormat = "MM"
+        let todayNumberOfMonth = Int(dateFormatter.string(from: now))
+        // getting entrant's birth date
+        let entrantBirthDate = Calendar.current.dateComponents([.day, .year, .month], from: hasBirthday)
+        
+        // checking if month and day are same
+        if (todayNumberOfDay == entrantBirthDate.day && todayNumberOfMonth == entrantBirthDate.month) {
+            return true
+        }
+        return false
     }
 }
 

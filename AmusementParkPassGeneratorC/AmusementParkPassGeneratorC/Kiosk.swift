@@ -33,4 +33,5 @@ struct Kiosk {
         
         return false
     }
+
 }
